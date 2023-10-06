@@ -3,9 +3,9 @@ form {
     margin: 0 auto;
     width: 400px;
     /* Para ver as bordas do formulário */
-    padding: 1em;
-    border: 1px solid #ccc;
-    border-radius: 1em;
+    padding: 6em;
+    border: 2px solid #5aff68;
+    border-radius: 9em;
 }
 
 form div+div {
