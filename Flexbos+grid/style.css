@@ -58,3 +58,69 @@ img {
     flex: 1 1 200px;
     margin: 10px 10px;
 }
+
+/* outro documento */
+
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    /* A propriedade CSS flex-wrap define se os itens flexíveis são forçados a ficarem na mesma linha ou se podem ser quebradas em varias linhas. Se o argumento for valido, ele define a direção em que as linhas são empilhadas. */
+}
+
+li {
+    height: 40vh;
+    flex-grow: 1;
+    /* A propriedade flex do CSS, define como um ítem será posicionado para no espaço disponível dentro de seu container. */
+}
+
+li:last-child {
+    flex-grow: 10;
+}
+
+img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    /* A propriedade CSS object-fit especifica como o conteúdo de um elemento substituído deve ser ajustado à caixa estabelecida pela altura e largura usadas. */
+    vertical-align: bottom;
+}
+
+
+
+
+
+
+
+
+/* Aqui pra baixo começamos a pensar em MOBILE */
+
+@media (max-aspect-ratio: 1/1) {
+    li {
+        height: 30vh;
+    }
+}
+
+@media (max-height: 480px) {
+    li {
+        height: 80vh;
+    }
+}
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+    ul {
+        flex-direction: row;
+    }
+
+    li {
+        height: auto;
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        max-height: 75vh;
+        min-width: 0;
+    }
+}
+
